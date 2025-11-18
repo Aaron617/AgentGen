@@ -11,3 +11,7 @@ src/temp.pddl
 src/utils/temp_pddl/
 
 pddlgym_planners/
+
+temp/
+
+src/data/it12/hf_ready/

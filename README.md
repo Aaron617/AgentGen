@@ -70,7 +70,7 @@ For additional components:
 
 ## 📦 Model & Dataset
 
-- **Dataset**: Our reproduced dataset after iterative environment and task generation is available in the `src/data/it12` folder
+- **Dataset**: The dataset after iterative environment and task generation is available in the `src/data/it12` folder. The trainig-ready conversation SFT data is available at `src/data/sft_data.json`.
 - **Model**: We followed the training configuration from the original paper to reproduce the models (We trained the AgentGen-8B model with alpaca template since there exists a bug when training with llama-3 template):
 
 | Model | Huggingface Repo |
