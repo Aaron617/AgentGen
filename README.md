@@ -1,23 +1,32 @@
-# 🤖 AgentGen Reproduction
-> This repository contains code that reproduces the experiments from the paper: "AgentGen: Enhancing Planning Abilities for Large Language Model based Agent via Environment and Task Generation"
-
-This is an unofficial implementation that aims to reproduce the methodology and experiments described in the original AgentGen paper.
+# ✨ AgentGen: Enhancing Planning Abilities for Large Language Model based Agent via Environment and Task Generation
 
 [![arXiv](https://img.shields.io/badge/arXiv-2408.00764-b31b1b.svg)](https://arxiv.org/abs/2408.00764)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAgentGen2024E%2FAgentGen&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false)
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
+<!-- [![Build](https://github.com/AgentGen2024E/AgentGen/actions/workflows/main.yml/badge.svg)](https://github.com/AgentGen2024E/AgentGen/actions) -->
+<!-- [![Issues](https://img.shields.io/github/issues/AgentGen2024E/AgentGen.svg)](https://github.com/AgentGen2024E/AgentGen/issues) -->
+<!-- [![Stars](https://img.shields.io/github/stars/AgentGen2024E/AgentGen.svg)](https://github.com/AgentGen2024E/AgentGen/stargazers) -->
+<!-- ![](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAgentGen2024E%2FAgentGen&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false) -->
 
-## 📋 Table of Contents
-- [Updates](#-updates)
-- [Installation](#️-installation)
-- [Quick Start](#-quick-start)
-- [Experiments](#-experiments)
-- [Model & Dataset](#-model--dataset)
-- [Acknowledgement](#-acknowledgement)
+<p align="center">
+  <img src="assets/teaser.png" alt="AgentGen Teaser" style="width:100%;"/>
+</p>
+
+
+<!-- ## 📋 Table of Contents
+- [🤖 AgentGen: Enhancing Planning Abilities for Large Language Model based Agent via Environment and Task Generation](#-agentgen-enhancing-planning-abilities-for-large-language-model-based-agent-via-environment-and-task-generation)
+  - [📋 Table of Contents](#-table-of-contents)
+  - [📢 Updates](#-updates)
+  - [🛠️ Installation](#️-installation)
+  - [🚀 Quick Start](#-quick-start)
+  - [🧪 Experiments](#-experiments)
+  - [📦 Model \& Dataset](#-model--dataset)
+  - [🙏 Acknowledgement](#-acknowledgement) -->
 
 ## 📢 Updates
 
-- **2024/12/11**: Initial release of our reproduction code
+- **2025/05**: Checking our new [Text2World](https://arxiv.org/abs/2502.13092) paper on PDDL generation accepted by ACL 2025 Findings.
+- **2024/12/11**: Initial release the code
 
 ## 🛠️ Installation
 
@@ -55,7 +64,7 @@ This repository provides our implementation to reproduce the data generation pro
 1. Segment the `src/data/inpiration_corpus/lima.json`
 2. Run the `run.sh` script iteratively
 
-For additional components used in our reproduction:
+For additional components:
 - **Model Training**: We use [llama-factory](https://github.com/hiyouga/LLaMA-Factory/tree/main)
 - **Model Evaluation**: We use [AgentBoard](https://github.com/hkust-nlp/AgentBoard/tree/main/agentboard)
 
@@ -64,15 +73,14 @@ For additional components used in our reproduction:
 - **Dataset**: Our reproduced dataset after iterative environment and task generation is available in the `src/data/it12` folder
 - **Model**: We followed the training configuration from the original paper to reproduce the models (We trained the AgentGen-8B model with alpaca template since there exists a bug when training with llama-3 template):
 
-| Model | Huggingface Repo | Original Progress Rate | Reproduced Progress Rate |
-|-------|-----------------|----------------------|----------------------|
-| AgentGen-70B-Lora-Rank1 | [🤗 Huggingface](https://huggingface.co/DannyShaw/AgentGen-70B-Lora-Rank1) | - | 84.2% |
-| AgentGen-70B-Lora-Rank16 | [🤗 Huggingface](https://huggingface.co/DannyShaw/AgentGen-70B-Lora-Rank16) | 81.5% | 81.75% |
-| AgentGen-8B | [🤗 Huggingface](https://huggingface.co/DannyShaw/AgentGen-8B) | 33.3% | 34.7% |
+| Model | Huggingface Repo |
+|-------|-----------------|
+| AgentGen-70B-Lora-Rank1 | [🤗 Huggingface](https://huggingface.co/DannyShaw/AgentGen-70B-Lora-Rank1) |
+| AgentGen-70B-Lora-Rank16 | [🤗 Huggingface](https://huggingface.co/DannyShaw/AgentGen-70B-Lora-Rank16) |
+| AgentGen-8B | [🤗 Huggingface](https://huggingface.co/DannyShaw/AgentGen-8B) |
 
-## 🙏 Acknowledgement
-
-This is an unofficial implementation that reproduces the work described in the AgentGen paper. All credit for the original methodology goes to the paper authors. If you use this reproduction in your research, please cite the original paper:
+## 🙏 Cite
+If you find this repo helpful in your research, please cite the original paper:
 
 ```bibtex
 @article{hu2024agentgen,
@@ -82,8 +90,3 @@ This is an unofficial implementation that reproduces the work described in the A
   year={2024}
 }
 ```
-
----
-<div align="center">
-<i>An unofficial reproduction of the AgentGen paper</i>
-</div>
